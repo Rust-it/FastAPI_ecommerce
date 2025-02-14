@@ -29,7 +29,6 @@
 | Аутентификация  | JWT + OAuth2PasswordBearer          |
 | Кэширование     | Redis 7                             |
 | Деплой          | Docker + Nginx + Gunicorn           |
-| Мониторинг      | Prometheus + Grafana                |
 
 ## 🚀 Быстрый старт
 
