@@ -2,16 +2,20 @@
 
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=FastAPI&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
+![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-D71F00?style=for-the-badge&logo=SQLAlchemy&logoColor=FFFFFF)
+![Redis](https://img.shields.io/badge/Redis-FF4438?style=for-the-badge&logo=Redis&logoColor=FFFFFF)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Gunicorn](https://img.shields.io/badge/Gunicorn-499848?style=for-the-badge&logo=Gunicorn&logoColor=FFFFFF)
+![NGINX](https://img.shields.io/badge/NGINX-009639?style=for-the-badge&logo=NGINX&logoColor=FFFFFF)
 
-Современный бэкенд для электронной коммерции с использованием FastAPI, PostgreSQL и Docker. Проект поддерживает полный цикл управления пользователями, товарами, заказами и отзывами.
 
-## 🌟 Особенности :cite[1]:cite[3]:cite[5]
+Современный бэкенд для электронной коммерции с использованием FastAPI, PostgreSQL, SQLAlchemy, Redis, Docker, Gunicorn и Nginx. Проект поддерживает управление пользователями, категориями, товарами и отзывами с рейтингом.
+
+## 🌟 Особенности:
 - **Аутентификация JWT** с разделением ролей (админ/продавец/покупатель)
 - **CRUD операции** для:
   - Товаров (с категориями и фильтрацией)
-  - Пользователей (регистрация, профиль, адреса доставки)
-  - Корзины покупок и заказов
+  - Пользователей (регистрация, профиль)
   - Отзывов и рейтингов товаров
 - **Swagger/ReDoc документация** с возможностью тестирования API
 - **Асинхронная архитектура** с поддержкой 1000+ RPS
@@ -48,3 +52,9 @@ docker-compose -f docker-compose.prod.yml up -d --build
 
 # 4. Применить миграции
 docker-compose exec web alembic upgrade head
+```
+
+### После запуска документация будет доступна:
+
+* Swagger UI: http://localhost/docs или http://127.0.0.1/docs
+* ReDoc: http://localhost/redoc или http://127.0.0.1/redoc
