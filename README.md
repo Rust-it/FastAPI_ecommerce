@@ -43,14 +43,10 @@
 git clone https://github.com/Rust-it/FastAPI_ecommerce.git
 cd FastAPI_ecommerce
 
-# 2. Настроить окружение
-cp .env.example .env
-# Заполнить SECRET_KEY, DB_* параметры в .env
-
-# 3. Запустить в Docker
+# 2. Запустить в Docker
 docker-compose -f docker-compose.prod.yml up -d --build
 
-# 4. Применить миграции
+# 3. Применить миграции
 docker-compose exec web alembic upgrade head
 ```
 
