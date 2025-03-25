@@ -9,47 +9,47 @@
 ![NGINX](https://img.shields.io/badge/NGINX-009639?style=for-the-badge&logo=NGINX&logoColor=FFFFFF)
 
 
-Современный бэкенд для электронной коммерции с использованием FastAPI, PostgreSQL, SQLAlchemy, Redis, Docker, Gunicorn и Nginx. Проект поддерживает управление пользователями, категориями, товарами и отзывами с рейтингом.
+Modern E-commerce Backend with FastAPI, PostgreSQL, SQLAlchemy, Redis, Docker, Gunicorn, and Nginx. The project supports user management, categories, products, and reviews with ratings.
 
-## 🌟 Особенности:
-- **Аутентификация JWT** с разделением ролей (админ/продавец/покупатель)
-- **CRUD операции** для:
-  - Товаров (с категориями и фильтрацией)
-  - Пользователей (регистрация, профиль)
-  - Отзывов и рейтингов товаров
-- **Swagger/ReDoc документация** с возможностью тестирования API
-- **Асинхронная архитектура** с поддержкой 1000+ RPS
-- Готовые Docker-образы для production
+## 🌟 Features:
+- **JWT Authentication** with role-based access (admin/seller/customer)
+- **CRUD Operations** for:
+  - Products (with categories and filtering)
+  - Users (registration, profile management)
+  - Product reviews and ratings
+- **Swagger/ReDoc API Documentation** with interactive testing
+- **Asynchronous Architecture** supporting 1000+ RPS
+- Pre-built Docker images for production
 
-## 🛠 Технологии
-| Компонент       | Технологии                          |
+## 🛠 Technologies
+| Component       | Technologies                          |
 |-----------------|-------------------------------------|
-| Фреймворк       | FastAPI 0.109+                      |
-| База данных     | PostgreSQL 15 + SQLAlchemy 2.0      |
-| Аутентификация  | JWT + OAuth2PasswordBearer          |
-| Кэширование     | Redis 7                             |
-| Деплой          | Docker + Nginx + Gunicorn           |
+| Framework       | FastAPI 0.109+                      |
+| Database        | PostgreSQL 15 + SQLAlchemy 2.0      |
+| Authentication  | JWT + OAuth2PasswordBearer          |
+| Caching         | Redis 7                             |
+| Deployment      | Docker + Nginx + Gunicorn           |
 
-## 🚀 Быстрый старт
+## 🚀 Quick Start
 
-### Предварительные требования
+### Prerequisites
 - Docker 24+
 - Python 3.11+
 - PostgreSQL 15
 
 ```bash
-# 1. Клонировать репозиторий
+# 1. Clone repository
 git clone https://github.com/Rust-it/FastAPI_ecommerce.git
 cd FastAPI_ecommerce
 
-# 2. Запустить в Docker
+# 2. Start with Docker
 docker-compose -f docker-compose.prod.yml up -d --build
 
-# 3. Применить миграции
+# 3. Apply migrations
 docker-compose exec web alembic upgrade head
 ```
 
-### После запуска документация будет доступна:
+### After launching, the documentation will be available at:
 
-* Swagger UI: http://localhost/docs или http://127.0.0.1/docs
-* ReDoc: http://localhost/redoc или http://127.0.0.1/redoc
+* Swagger UI: http://localhost/docs or http://127.0.0.1/docs
+* ReDoc: http://localhost/redoc or http://127.0.0.1/redoc
